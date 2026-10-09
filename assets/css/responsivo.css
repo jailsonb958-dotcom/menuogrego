@@ -1,33 +1,4 @@
-@media screen and (max-width:600px){
-    .navbar{
-        position: fixed;
-    }
-    
-    .logo{
-        margin: 0;
-        text-align: center;
-    }
-    .header{
-        padding-top: 50px;
-    }
-    .headline{
-        flex: 100%;
-        margin: 5%;
-        text-align: center;
-    }
-    .headline p{
-        text-align: center;
-    }
-    .img-headline{
-        flex: 100%;
-        margin: 5%;
-        text-align: center;
-    }
-    .card{
-        width: 100%;
-       
-
-    }
-
-
+@media (max-width: 600px) {
+  .card-title { font-size: 1rem; }
+  .card-text p.card-text, .card-body > p:not(.card-price) { font-size: .88rem; }
 }
