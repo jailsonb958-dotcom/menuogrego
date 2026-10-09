@@ -55,8 +55,6 @@ function App() {
   const checkout = async () => {
     const message = `Olá, O Grego! Gostaria de fazer este pedido:\n\n${buildOrder()}`
     const encodedMessage = encodeURIComponent(message)
-
-    await navigator.clipboard?.writeText(message)
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank')
   }
 
@@ -69,21 +67,22 @@ function App() {
 
     <main id="inicio">
       <section className="hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(16,45,70,.88), rgba(16,45,70,.15)), url(${highlights[hero].image})` }}>
-        <div className="hero-copy"><p className="eyebrow"><Sparkles size={15}/> cozinha grega contemporânea</p><h1>{highlights[hero].title}</h1><p>Um cardápio feito para descobrir, compartilhar e celebrar o melhor da mesa grega.</p><button className="cta" onClick={() => document.getElementById('cardapio')?.scrollIntoView({ behavior: 'smooth' })}>Ver cardápio <ArrowRight size={16}/></button></div>
-        <div className="hero-switcher">{highlights.map((slide, index) => <button key={slide.title} className={hero === index ? 'active' : ''} onClick={() => setHero(index)}><span>0{index + 1}</span><strong>{slide.eyebrow}</strong></button>)}</div>
+        <div className="hero-copy"><p className="eyebrow"><Sparkles size={15}/> cozinha grega contemporânea</p><h1>{highlights[hero].title}</h1><p>Um cardápio feito para descobrir, compartilhar [...]
+        <div className="hero-switcher">{highlights.map((slide, index) => <button key={slide.title} className={hero === index ? 'active' : ''} onClick={() => setHero(index)}><span>0{index + 1}</spa[...]
       </section>
 
-      <section className="intro" id="historia"><div><p className="eyebrow dark"><ChefHat size={15}/> da nossa cozinha</p><h2>Feito para colocar a conversa no centro da mesa.</h2></div><p>Do primeiro aperitivo à sobremesa, cada prato é pensado para ser compartilhado, saboreado e lembrado.</p></section>
+      <section className="intro" id="historia"><div><p className="eyebrow dark"><ChefHat size={15}/> da nossa cozinha</p><h2>Feito para colocar a conversa no centro da mesa.</h2></div><p>Do primei[...]
 
-      <section className="menu-section" id="cardapio"><div className="section-heading"><div><p className="eyebrow dark">o cardápio</p><h2>Escolha seu momento</h2></div><label className="search-box"><Search size={16}/><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar prato ou ingrediente" /></label></div>
-        <div className="category-scroller"><button className={activeCategory === 'TODOS' ? 'selected' : ''} onClick={() => setActiveCategory('TODOS')}>Todos <span>{items.length}</span></button>{categories.map((category) => <button key={category} className={activeCategory === category ? 'selected' : ''} onClick={() => setActiveCategory(category)}>{categoryLabels[category] || category} <span>{items.filter((item) => item.category === category).length}</span></button>)}</div>
-        <div className="menu-grid">{visibleItems.map((item) => <article className="dish-card" key={itemId(item)}><div className="dish-image"><img src={item.image} alt={item.name} loading="lazy"/><button className="add-button" onClick={() => add(item)} aria-label={`Adicionar ${item.name}`}><Plus size={16}/></button></div><div className="dish-body"><div className="dish-header"><div><h3>{item.name}</h3><p>{item.description}</p></div><span>{money(item.price)}</span></div><div className="dish-meta"><span>{categoryLabels[item.category] || item.category}</span><button onClick={() => add(item)}>Adicionar</button></div></div></article>)}</div>
+      <section className="menu-section" id="cardapio"><div className="section-heading"><div><p className="eyebrow dark">o cardápio</p><h2>Escolha seu momento</h2></div><label className="search-bo[...]
+        <div className="category-scroller"><button className={activeCategory === 'TODOS' ? 'selected' : ''} onClick={() => setActiveCategory('TODOS')}>Todos <span>{items.length}</span></button>{ca[...]
+        <div className="menu-grid">{visibleItems.map((item) => <article className="dish-card" key={itemId(item)}><div className="dish-image"><img src={item.image} alt={item.name} loading="lazy"/><[...]
         {visibleItems.length === 0 && <div className="empty-state"><Search size={28}/><h3>Nenhum prato encontrado</h3><p>Tente outra busca ou escolha uma categoria.</p></div>}
       </section>
     </main>
-    <footer id="contato"><div className="footer-brand"><span className="brand-mark">OG</span><strong>O Grego</strong></div><p>Uma experiência mediterrânea, servida com tempo e afeto.</p><small>Contato · WhatsApp · pedidos@oreggo.com.br</small></footer>
+    <footer id="contato"><div className="footer-brand"><span className="brand-mark">OG</span><strong>O Grego</strong></div><p>Uma experiência mediterrânea, servida com tempo e afeto.</p><small>C[...]
 
-    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div><p className="eyebrow dark">pedido</p><h3>Seu pedido</h3></div><button className="icon-button" onClick={() => setCartOpen(false)} aria-label="Fechar carrinho"><X size={18}/></button></div>{cartItems.length === 0 ? <div className="empty-cart"><ShoppingBag size={28}/><p>Seu carrinho está vazio.</p></div> : <ul className="cart-list">{cartItems.map((item) => <li key={itemId(item)}><div><strong>{item.name}</strong><small>{money(item.price)} cada</small></div><div className="cart-controls"><button onClick={() => remove(item)} aria-label={`Remover ${item.name}`}><Minus size={14}/></button><span>{cart[itemId(item)]}</span><button onClick={() => add(item)} aria-label={`Adicionar mais ${item.name}`}><Plus size={14}/></button></div></li>)}</ul>}<div className="cart-footer"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout} disabled={cartItems.length === 0}>Enviar pelo WhatsApp</button></div></aside></div>}
+    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div[...]
+      <div className="cart-footer"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout} disabled={cartItems.length === 0}>Enviar pelo WhatsApp</button></div></aside></div>}
   </div>
 }
 
