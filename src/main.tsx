@@ -26,7 +26,6 @@ const highlights = [
 ]
 const money = (value: number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(value)
 const itemId = (item: MenuItem) => `${item.category}-${item.name}`
-const whatsappNumber = '5521981625903'
 
 function App() {
   const [activeCategory, setActiveCategory] = useState('TODOS')
@@ -54,8 +53,8 @@ function App() {
   const buildOrder = () => cartItems.map((item) => `${cart[itemId(item)]}x ${item.name} — ${money(item.price * cart[itemId(item)])}`).join('\n') + `\n\nTotal: ${money(cartTotal)}`
   const checkout = async () => {
     const message = `Olá, O Grego! Gostaria de fazer este pedido:\n\n${buildOrder()}`
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank')
+    await navigator.clipboard?.writeText(message)
+    alert('Resumo copiado. Para ativar o envio direto, configure o número de WhatsApp do restaurante no arquivo src/main.tsx.')
   }
 
   return <div className="app-shell">
@@ -67,22 +66,21 @@ function App() {
 
     <main id="inicio">
       <section className="hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(16,45,70,.88), rgba(16,45,70,.15)), url(${highlights[hero].image})` }}>
-        <div className="hero-copy"><p className="eyebrow"><Sparkles size={15}/> cozinha grega contemporânea</p><h1>{highlights[hero].title}</h1><p>Um cardápio feito para descobrir, compartilhar [...]
-        <div className="hero-switcher">{highlights.map((slide, index) => <button key={slide.title} className={hero === index ? 'active' : ''} onClick={() => setHero(index)}><span>0{index + 1}</spa[...]
+        <div className="hero-copy"><p className="eyebrow"><Sparkles size={15}/> cozinha grega contemporânea</p><h1>{highlights[hero].title}</h1><p>Um cardápio feito para descobrir, compartilhar e voltar. Ingredientes frescos, receitas de família e a energia acolhedora do Mediterrâneo.</p><a className="primary-button" href="#cardapio">Explorar o cardápio <ArrowRight size={18}/></a></div>
+        <div className="hero-switcher">{highlights.map((slide, index) => <button key={slide.title} className={hero === index ? 'active' : ''} onClick={() => setHero(index)}><span>0{index + 1}</span>{slide.eyebrow}</button>)}</div>
       </section>
 
-      <section className="intro" id="historia"><div><p className="eyebrow dark"><ChefHat size={15}/> da nossa cozinha</p><h2>Feito para colocar a conversa no centro da mesa.</h2></div><p>Do primei[...]
+      <section className="intro" id="historia"><div><p className="eyebrow dark"><ChefHat size={15}/> da nossa cozinha</p><h2>Feito para colocar a conversa no centro da mesa.</h2></div><p>Do primeiro pão ao último gole, cada prato celebra a simplicidade generosa da Grécia. Navegue por categoria ou pesquise sua próxima descoberta.</p></section>
 
-      <section className="menu-section" id="cardapio"><div className="section-heading"><div><p className="eyebrow dark">o cardápio</p><h2>Escolha seu momento</h2></div><label className="search-bo[...]
-        <div className="category-scroller"><button className={activeCategory === 'TODOS' ? 'selected' : ''} onClick={() => setActiveCategory('TODOS')}>Todos <span>{items.length}</span></button>{ca[...]
-        <div className="menu-grid">{visibleItems.map((item) => <article className="dish-card" key={itemId(item)}><div className="dish-image"><img src={item.image} alt={item.name} loading="lazy"/><[...]
+      <section className="menu-section" id="cardapio"><div className="section-heading"><div><p className="eyebrow dark">o cardápio</p><h2>Escolha seu momento</h2></div><label className="search-box"><Search size={18}/><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar um prato..." aria-label="Buscar um prato"/>{query && <button onClick={() => setQuery('')} aria-label="Limpar busca"><X size={15}/></button>}</label></div>
+        <div className="category-scroller"><button className={activeCategory === 'TODOS' ? 'selected' : ''} onClick={() => setActiveCategory('TODOS')}>Todos <span>{items.length}</span></button>{categories.map((category) => <button className={activeCategory === category ? 'selected' : ''} key={category} onClick={() => setActiveCategory(category)}>{categoryLabels[category] || category}<span>{items.filter((item) => item.category === category).length}</span></button>)}</div>
+        <div className="menu-grid">{visibleItems.map((item) => <article className="dish-card" key={itemId(item)}><div className="dish-image"><img src={item.image} alt={item.name} loading="lazy"/><span>{categoryLabels[item.category] || item.category}</span></div><div className="dish-content"><div><h3>{item.name.replace(/^\d+\s/, '')}</h3><p>{item.description.replace(/\s+/g, ' ')}</p></div><div className="dish-footer"><strong>{money(item.price)}</strong><button className="add-button" onClick={() => add(item)}><Plus size={16}/> adicionar</button></div></div></article>)}</div>
         {visibleItems.length === 0 && <div className="empty-state"><Search size={28}/><h3>Nenhum prato encontrado</h3><p>Tente outra busca ou escolha uma categoria.</p></div>}
       </section>
     </main>
-    <footer id="contato"><div className="footer-brand"><span className="brand-mark">OG</span><strong>O Grego</strong></div><p>Uma experiência mediterrânea, servida com tempo e afeto.</p><small>C[...]
+    <footer id="contato"><div className="footer-brand"><span className="brand-mark">OG</span><strong>O Grego</strong></div><p>Uma experiência mediterrânea, servida com tempo e afeto.</p><small>Cardápio digital · São Paulo</small></footer>
 
-    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div[...]
-      <div className="cart-footer"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout} disabled={cartItems.length === 0}>Enviar pelo WhatsApp</button></div></aside></div>}
+    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div><p className="eyebrow dark">seu pedido</p><h2>{cartCount ? `${cartCount} ${cartCount === 1 ? 'item' : 'itens'}` : 'Seu carrinho'}</h2></div><button className="icon-button" onClick={() => setCartOpen(false)} aria-label="Fechar carrinho"><X/></button></div>{cartItems.length === 0 ? <div className="cart-empty"><ShoppingBag size={38}/><h3>Comece pelos sabores</h3><p>Adicione seus pratos favoritos ao pedido.</p></div> : <><div className="cart-list">{cartItems.map((item) => <div className="cart-line" key={itemId(item)}><img src={item.image} alt=""/><div className="cart-line-info"><h3>{item.name.replace(/^\d+\s/, '')}</h3><strong>{money(item.price * cart[itemId(item)])}</strong><div className="quantity"><button onClick={() => remove(item)} aria-label="Diminuir quantidade"><Minus size={14}/></button><span>{cart[itemId(item)]}</span><button onClick={() => add(item)} aria-label="Aumentar quantidade"><Plus size={14}/></button><button className="delete-button" onClick={() => setCart((current) => { const next={...current}; delete next[itemId(item)]; return next })} aria-label="Remover item"><Trash2 size={14}/></button></div></div></div>)}</div><div className="cart-summary"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout}>Copiar pedido para WhatsApp <ArrowRight size={17}/></button><small>O botão copia o resumo do pedido. O número do restaurante será conectado na próxima configuração.</small></div></>}</aside></div>}
   </div>
 }
 
