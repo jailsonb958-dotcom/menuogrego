@@ -4,8 +4,11 @@ Cardápio responsivo do restaurante O Grego, desenvolvido com HTML, CSS, JavaScr
 
 ## Acesso online
 
-- **Netlify:** link será atualizado após o deploy.
-- **GitHub:** https://github.com/jailsonb958-dotcom/menuogrego
+- **Site publicado no Netlify:** https://menuogrego.netlify.app/
+- **Deploy direto do Netlify:** https://6ac90751eb3060110778d11c--menuogrego.netlify.app/
+- **Repositório público no GitHub:** https://github.com/jailsonb958-dotcom/menuogrego
+
+O endereço principal recomendado para compartilhar com os clientes é o do Netlify. O endereço direto do deploy funciona como uma versão de validação e pode ser usado para conferir uma publicação específica.
 
 ## Recursos
 
