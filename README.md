@@ -1,38 +1,54 @@
 # O Grego — Cardápio digital
 
-Cardápio responsivo do restaurante O Grego, desenvolvido com HTML, CSS, JavaScript e Bootstrap.
+Uma versão moderna do cardápio do restaurante O Grego, refeita com **React + TypeScript + Vite** e design responsivo para celular.
 
-## Acesso online
+## Demonstração
 
-- **Site publicado no Netlify:** https://menuogrego.netlify.app/
-- **Deploy direto do Netlify:** https://6ac90751eb3060110778d11c--menuogrego.netlify.app/
+- **Demonstração moderna:** https://4173-ibzow5gkllquizvx76kzh-bd162090.us4.manus.computer/
+- **Site Netlify anterior:** https://menuogrego.netlify.app/
+- **Repositório público:** https://github.com/jailsonb958-dotcom/menuogrego
 
+A demonstração moderna inclui busca, filtros por categoria, cards com imagens, carrinho lateral, ajuste de quantidades e resumo pronto para WhatsApp. A URL de demonstração pertence ao ambiente temporário de desenvolvimento.
 
-O endereço principal recomendado para compartilhar com os clientes é o do Netlify. O endereço direto do deploy funciona como uma versão de validação e pode ser usado para conferir uma publicação específica.
+## Stack
 
-## Recursos
+- React
+- TypeScript
+- Vite
+- CSS responsivo sem framework visual pesado
+- Lucide React para ícones
 
-- Layout responsivo para celular, tablet e computador.
-- Imagens dos pratos organizadas em cards.
-- Preços alinhados no rodapé dos cards.
-- Navegação por categorias.
-- Carrossel de destaques.
+## Funcionalidades
 
-## Executar localmente
+- Hero editorial com destaques do restaurante.
+- Busca por nome e descrição dos pratos.
+- Filtros por categoria com contagem de itens.
+- Fotos dos pratos reaproveitadas do acervo original.
+- Carrinho lateral com quantidade, remoção e total.
+- Resumo do pedido copiado para o WhatsApp.
+- Layout adaptado para celular, tablet e desktop.
 
-Como o projeto é estático, basta abrir o `index.html` no navegador ou iniciar um servidor local:
+## Desenvolvimento local
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Depois acesse `http://localhost:4173`.
+Para gerar a versão de produção:
+
+```bash
+npm run build
+npm run preview
+```
+
+O número real do WhatsApp ainda precisa ser configurado no checkout para transformar o resumo copiado em link direto de conversa.
 
 ## Estrutura
 
 ```text
-index.html              # Página principal do cardápio
-assets/css/style.css    # Estilos principais
-assets/css/responsivo.css
-assets/img/             # Fotos, logo e ícones
+src/main.tsx       # Aplicação React e estado do carrinho
+src/styles.css     # Design system e responsividade
+src/menu-data.json # Catálogo de pratos
+public/assets/     # Imagens servidas pelo Vite
 ```

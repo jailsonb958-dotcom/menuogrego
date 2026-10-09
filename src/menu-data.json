@@ -1,0 +1,373 @@
+[
+  {
+    "category": "STARTERS",
+    "name": "1 TARAMAS",
+    "description": "Smoked Cod fish eggs turned into a spread with white bread crumb, mixed with olive oil, lemon\n                            and dill.",
+    "price": 46,
+    "image": "/assets/img/taramas.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "2 TZATZIKI",
+    "description": "Greek yogurt spread made with cucumber, garlic, olive oil, vinegar and dill.",
+    "price": 36,
+    "image": "/assets/img/tzazik.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "3 MELITZANOSALATA",
+    "description": "Smoked eggplant spread made with mayo, greek yogurt, olive oil, garlic and walnuts.",
+    "price": 38,
+    "image": "/assets/img/melintzano-salata.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "4 HOMUS",
+    "description": "Hommus spread made with chickpeas, tahini, olive oil, lemon and black pepper.",
+    "price": 36,
+    "image": "/assets/img/homus.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "5 TETRALOGIA",
+    "description": "A combination of the 4 traditional Greek spreads (Tarama, Tzatziki, melitzanosalata, Hommus\n    ) served with Greek breads",
+    "price": 88,
+    "image": "/assets/img/tetralogia.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "6 HALOUMI ON THE GRILL",
+    "description": "Greek Haloumi cheese and tomatoes grilled, served with arugula, olive oil and oregano.",
+    "price": 69,
+    "image": "/assets/img/haloumi-grelhado.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "7 SPANAKOTIROPITA",
+    "description": "Baked spinach puffs with Feta cheese, onion, dill and egg wash",
+    "price": 49,
+    "image": "/assets/img/spanakopita.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "8 FETA ME MELI",
+    "description": "Fried feta cheese puffs served with honey and sesame seeds.",
+    "price": 69,
+    "image": "/assets/img/fea-meli.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "9 KEFTEDAKIA",
+    "description": "Ground beef dumplings, onion, garlic, parsley, mint, breadcrumbs, tzatzki sauce and tomato.",
+    "price": 59,
+    "image": "/assets/img/keftedakia2.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "10 MELINTZANA GEMISTI",
+    "description": "Eggplant stuffed with onion, tomato, garlic and bay leaf.",
+    "price": 49,
+    "image": "/assets/img/melintzano-gemista.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "11 HTAPODI SALATA",
+    "description": "Grilled octopus served with greek dressing (olive oil, vinegar and herbs)",
+    "price": 99,
+    "image": "/assets/img/htapodi-salata-2.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "12 CEVICHE AGINARES",
+    "description": "White fish ceviche served over an artichoke puree made with potato, onion, dill, olive oil and\n                            lemon.",
+    "price": 75,
+    "image": "/assets/img/salada-garides3.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "13 SOLOMOS TARTARE",
+    "description": "Salmon tartare, avocado, olive oil, lemon and dill.",
+    "price": 79,
+    "image": "/assets/img/tartare-salmão.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "14 KALAMARI TIGANITO",
+    "description": "Fried squid served with olive oil and lemon sauce",
+    "price": 77,
+    "image": "/assets/img/kalamari-tiganito.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "15 SAGANAKI GARIDES FLAMBE",
+    "description": "Sauteed shrimp with Feta cheese, green pepper, garlic, tomato sauce and flambé with Ouzo.",
+    "price": 84,
+    "image": "/assets/img/salada-garides.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "16 HTAPODI FAVA",
+    "description": "Grilled octopus served with Fava puree.",
+    "price": 99,
+    "image": "/assets/img/htapodi-fava.JPG"
+  },
+  {
+    "category": "STARTERS",
+    "name": "17 PIKILIA THALASINA",
+    "description": "A combination of seafood starters (Tarama, htapodi salad. Fried squid, Grilled squid, 2 Shrimp with Fresh Fries and Pita).",
+    "price": 159,
+    "image": "/assets/img/pikilia.jpeg"
+  },
+  {
+    "category": "SALADS",
+    "name": "18 GREEK SALAD",
+    "description": "The famous Greek salad with Feta cheese, tomato, cucumber, red onion, green pepper,\n                        croutons, black olives, oregano and Greek olive oil.",
+    "price": 69,
+    "image": "/assets/img/salada-grega.JPG"
+  },
+  {
+    "category": "SALADS",
+    "name": "19 MIXED SALAD WITH SHRIMPS",
+    "description": "Mix of green leaves with 3 Boiled Shrimps (VM), fennel, dill and olive oil.",
+    "price": 79,
+    "image": "/assets/img/salada-garides.JPG"
+  },
+  {
+    "category": "SALADS",
+    "name": "20 SALATA HALOUMI AND MUSHROOMS",
+    "description": "Arugula Leaf with Grilled Haloumi (Greek Cheese), Mushrooms and\n                        carrots in balsamic vinegar sauce.",
+    "price": 69,
+    "image": "/assets/img/salata-cogumelos.JPG"
+  },
+  {
+    "category": "SALADS",
+    "name": "21 KRITIKO PAXIMADI",
+    "description": "Greek bruschetta, cherry tomatoes, capers, feta, fresh onion,\n                        basil, garlic and dried tomato sauce.",
+    "price": 49,
+    "image": "/assets/img/brusketa.JPG"
+  },
+  {
+    "category": "SALADS",
+    "name": "22 HOMEMADE BREAD BASKET",
+    "description": "Black olive bread, feta oreganon olive oil,\n                        Premium wheat flour chipotle pita, White bread made from premium wheat flour and\n                        Greek pitta paprika olive oil oregano",
+    "price": 22,
+    "image": "/assets/img/paes.jpg"
+  },
+  {
+    "category": "KIDS MENU",
+    "name": "23 CHICKEN SKEWERS",
+    "description": "Comes with fresh Fries or salad",
+    "price": 45,
+    "image": "/assets/img/souvlaki-frango.JPG"
+  },
+  {
+    "category": "KIDS MENU",
+    "name": "24 KEFTEDES",
+    "description": "(fried minced meat dumplings)",
+    "price": 45,
+    "image": "/assets/img/keftedákia.JPG"
+  },
+  {
+    "category": "KIDS MENU",
+    "name": "25 PASTA WITH MINCED MEAT",
+    "description": "Linguine with minced meat and tomato sauce",
+    "price": 45,
+    "image": "/assets/img/linguine-mare.JPG"
+  },
+  {
+    "category": "KIDS MENU",
+    "name": "26 BIFTEKI",
+    "description": "(Greek burger) with fresh Fries",
+    "price": 45,
+    "image": "/assets/img/biftekia2.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "30 ROBALO FRIKASE",
+    "description": "Sea bass fillet with sparkling wine sauce, leeks and garlic.",
+    "price": 129,
+    "image": "/assets/img/garoupa.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "31 PSARI OLOKLIRO",
+    "description": "Snapper whole fish seared on the grill then oven cooked with olive oil and herbs. Served with\n                        lemon sauce and sautéed vegetables.",
+    "price": 159,
+    "image": "/assets/img/peixe-pargo.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "32 GARIDES NA GRELHA",
+    "description": "4 Grilled jumbo shrimps with lemon sauce served with mixed greens salad .",
+    "price": 149,
+    "image": "/assets/img/garoupa.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "33 BACALHAU ME MELI",
+    "description": "Lightly breaded Cod fish fried in olive oil. Served with Greek baked lemon potatoes and fish\n                        broth (onion, garlic and honey).",
+    "price": 134,
+    "image": "/assets/img/bacalhau-meli.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "34 SOLOMOS NO FORNO",
+    "description": "Salmon steak seared on the grill and finished off in the oven for a crispy herbal crust. Served\n                        with sauteed vegetables.",
+    "price": 139,
+    "image": "/assets/img/solomos-forno.JPG"
+  },
+  {
+    "category": "PSARIA(FISH)",
+    "name": "36 DUO HTAPODI & KALAMARI",
+    "description": "Grilled octopus with squid flavored with garlic and olive oil sauce, lemon served with cauliflower puree.",
+    "price": 149,
+    "image": "/assets/img/duo-lula-e-pouvo.JPG"
+  },
+  {
+    "category": "KOTOPOULO(CHICKEN)",
+    "name": "38 KERKIRAIKI PASTITSADA",
+    "description": "Chicken thigh and drumstick, cherry tomatoes cooked in red wine with herbs from Corfu served with Regatone(pasta).",
+    "price": 69,
+    "image": "/assets/img/coxa-sobrecoxa-regatone.JPG"
+  },
+  {
+    "category": "KOTOPOULO(CHICKEN)",
+    "name": "39 SOUVLAKI KOTOPOULO",
+    "description": "Grilled marinated chicken skewer with onion and peppers served with Greek fries and mixed\n                        greens salad with cherry tomatoes.",
+    "price": 55,
+    "image": "/assets/img/souvlaki-kotopoulo.JPG"
+  },
+  {
+    "category": "KOTOPOULO(CHICKEN)",
+    "name": "40 KOTOPOULO LEMONATO",
+    "description": "Grilled chicken breast steaks served with lemon sauce and white rice with parsley.",
+    "price": 49,
+    "image": "/assets/img/frango-lemonato.JPG"
+  },
+  {
+    "category": "HIRINO(PORK)",
+    "name": "41 GIROS",
+    "description": "Traditional Greek giro meat, made with marinated pork cut into small bits. Served with Greek\n                        fries, Tzatziki spread, red onion, sliced tomatoes and homemade grilled pita bread.",
+    "price": 85,
+    "image": "/assets/img/giros.JPG"
+  },
+  {
+    "category": "HIRINO(PORK)",
+    "name": "44 SOUVLAKI HIRINO",
+    "description": "Marinated pork cubes on a skewer with onion and peppers. Served with Greek fries and mixed\n                        greens salad with cherry tomatoes.",
+    "price": 66,
+    "image": "/assets/img/giros-no-espeto.JPG"
+  },
+  {
+    "category": "ARNAKI(LAMB)",
+    "name": "45 PAIDAKIA",
+    "description": "Grilled lamb chops served with a generous portion of Greek fries.",
+    "price": 149,
+    "image": "/assets/img/paidakia.JPG"
+  },
+  {
+    "category": "ARNAKI(LAMB)",
+    "name": "46  ARNAKI STO FORNO",
+    "description": "Roasted boneless leg of lamb with herbs. Served with traditional Greek baked lemon potatoes.",
+    "price": 145,
+    "image": "/assets/img/arnaki-no-forno.JPG"
+  },
+  {
+    "category": "ARNAKI(LAMB)",
+    "name": "47 ARNAKI YOUVETSI",
+    "description": "lamb meat slowly cooked with homemade tomato sauce, served with traditional Greek pasta (Kritharaki).",
+    "price": 129,
+    "image": "/assets/img/arnaki-youvetsi.JPG"
+  },
+  {
+    "category": "MEAT",
+    "name": "50 MOUSSAKA",
+    "description": "Traditional Greek dish, ground beef with herbs, layers of eggplant, courgettes and potatoes, topped with Béchamel cream with yogurt and tomato sauce.",
+    "price": 88,
+    "image": "/assets/img/moussakas.JPG"
+  },
+  {
+    "category": "MEAT",
+    "name": "51 SOUVLAKI VODINO",
+    "description": "Beef Skewer with Onions, Peppers, Garlic, Thyme, Served with fresh Fries, Tomatoes and Grated Feta.",
+    "price": 76,
+    "image": "/assets/img/souvlaki-vodino.JPG"
+  },
+  {
+    "category": "MEAT",
+    "name": "52 BIFITEKIA",
+    "description": "Ground beef grilled with herbs, onion,\n                        bread, oregano, parsley, mustard, accompanied by \n                        fresh fried potatoes and salad.",
+    "price": 66,
+    "image": "/assets/img/biftekia.JPG"
+  },
+  {
+    "category": "MEAT",
+    "name": "53 ENTRECOTE",
+    "description": "Grilled prime beef, cut Carved in coarse salt\n                        accompanied by fresh fried potatoes.",
+    "price": 99,
+    "image": "/assets/img/panceta.JPG"
+  },
+  {
+    "category": "MAKARONADES(PASTA)",
+    "name": "55 MAKARONADA ME ASTAKO",
+    "description": "Lobster, served with Linguine, in a fresh tomato and herb sauce with the scent of Ouzo,(for 2 people).",
+    "price": 319,
+    "image": "/assets/img/lagosta-liguine.JPG"
+  },
+  {
+    "category": "MAKARONADES(PASTA)",
+    "name": "56 THALASINA ME LINGUINE",
+    "description": "Seafood (shrimp, squid, mussels and clams), served with linguine, boiled cherry tomatoes, garlic and parsley.",
+    "price": 129,
+    "image": "/assets/img/linguine-mare.JPG"
+  },
+  {
+    "category": "MAKARONADES(PASTA)",
+    "name": "57 MAKARONADA ME LAHANIKA",
+    "description": "Linguine with vegetables (Zucchini, carrots, celery, onion and tomato).",
+    "price": 55,
+    "image": "/assets/img/linguine-mare.JPG"
+  },
+  {
+    "category": "MAKARONADES(PASTA)",
+    "name": "58 MAKARONADA ME KIMA",
+    "description": "Linguine with ground beef in tomato sauce.",
+    "price": 59,
+    "image": "/assets/img/linguine-mare.JPG"
+  },
+  {
+    "category": "COMBOS",
+    "name": "MEZEDAKIA FOR 2 PEOPLE",
+    "description": "A variety of Greek starters to taste and enjoy with, Ouzo, or Wine, or Tsipouro, or Beer, or with one of our DRINKS  Including:\n\nTarama, Tzatziki, Melitzanosalata, Xomus, Feta, Greek Salad, Keftedakia, Xtapodaki, Kalamari, Xomus, Melitzana Gemisti, Greek black olives with a basket of Greek breads.",
+    "price": 399,
+    "image": "/assets/img/tetralogia2.JPG"
+  },
+  {
+    "category": "COMBOS",
+    "name": "GREEK TABLE FOR 2 PEOPLE",
+    "description": "Varieties of Greek breads.",
+    "price": 599,
+    "image": "/assets/img/pikilia.jpeg"
+  },
+  {
+    "category": "DESSERTS",
+    "name": "BAKLAVAS",
+    "description": "Traditional Greek pastry with layers of filo, walnuts, cinnamon and honey syrup.",
+    "price": 39,
+    "image": "/assets/img/baklavas.JPG"
+  },
+  {
+    "category": "DESSERTS",
+    "name": "BAKLAVAS ICE CREAM",
+    "description": "Baklava served with a scoop of ice cream and a touch of honey.",
+    "price": 45,
+    "image": "/assets/img/baklavas2.JPG"
+  },
+  {
+    "category": "DESSERTS",
+    "name": "YOGURTE ME MELI",
+    "description": "Greek yogurt with honey and walnuts.",
+    "price": 32,
+    "image": "/assets/img/yougurte-meli.JPG"
+  }
+]
