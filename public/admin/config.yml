@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: jailsonb958-dotcom/menuogrego
+  branch: main
+  auth_type: implicit
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+local_backend: true
+
+media_folder: public/assets/img
+public_folder: /assets/img
+
+site_url: https://menuogrego.netlify.app
+logo_url: /assets/img/logo-og.png
+locale: pt_BR
+
+collections:
+  - name: cardapio
+    label: Cardápio
+    description: Gerencie os pratos, preços, categorias, descrições e fotos do restaurante.
+    files:
+      - label: Pratos do cardápio
+        name: pratos
+        file: src/menu-data.json
+        fields:
+          - label: Pratos
+            name: items
+            widget: list
+            summary: "{{fields.name}} · R$ {{fields.price}}"
+            fields:
+              - label: Categoria
+                name: category
+                widget: select
+                options:
+                  - { label: Entradas, value: STARTERS }
+                  - { label: Saladas, value: SALADS }
+                  - { label: Kids, value: KIDS MENU }
+                  - { label: Peixes, value: PSARIA(FISH) }
+                  - { label: Frango, value: KOTOPOULO(CHICKEN) }
+                  - { label: Porco, value: HIRINO(PORK) }
+                  - { label: Cordeiro, value: ARNAKI(LAMB) }
+                  - { label: Carnes, value: MEAT }
+                  - { label: Massas, value: MAKARONADES(PASTA) }
+                  - { label: Combos, value: COMBOS }
+                  - { label: Sobremesas, value: DESSERTS }
+              - label: Nome do prato
+                name: name
+                widget: string
+                hint: "O número inicial é opcional e serve apenas para organizar o menu."
+              - label: Descrição
+                name: description
+                widget: text
+              - label: Preço (R$)
+                name: price
+                widget: number
+                value_type: int
+                min: 0
+              - label: Foto
+                name: image
+                widget: image
+                required: false
+                default: /assets/img/taramas.JPG

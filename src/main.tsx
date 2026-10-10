@@ -13,7 +13,7 @@ type MenuItem = {
 }
 type Cart = Record<string, number>
 
-const items = menu as MenuItem[]
+const items = (menu as { items: MenuItem[] }).items
 const categoryLabels: Record<string, string> = {
   STARTERS: 'Entradas', SALADS: 'Saladas', 'KIDS MENU': 'Kids', 'PSARIA(FISH)': 'Peixes',
   'KOTOPOULO(CHICKEN)': 'Frango', 'HIRINO(PORK)': 'Porco', 'ARNAKI(LAMB)': 'Cordeiro',
