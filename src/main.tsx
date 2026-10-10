@@ -51,7 +51,7 @@ function App() {
     if (next[itemId(item)] <= 0) delete next[itemId(item)]
     return next
   })
-  const buildOrder = () => cartItems.map((item) => `${cart[itemId(item)]}x ${item.name} — ${money(item.price * cart[itemId(item)])}`).join('\n') + `\n\nTotal: ${money(cartTotal)}`
+  const buildOrder = () => cartItems.map((item) => `${cart[itemId(item)]}x ${item.name.replace(/^\d+\s/, '')} — ${money(item.price * cart[itemId(item)])}`).join('\n') + `\n\nTotal: ${money(cartTotal)}`
   const checkout = () => {
     const message = `Olá, O Grego! Gostaria de fazer este pedido:\n\n${buildOrder()}`
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
