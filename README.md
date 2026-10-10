@@ -2,13 +2,20 @@
 
 Uma versão moderna do cardápio do restaurante O Grego, refeita com **React + TypeScript + Vite** e design responsivo para celular.
 
-## Demonstração
+## Acesso online
 
-- **Demonstração moderna:** https://4173-ibzow5gkllquizvx76kzh-bd162090.us4.manus.computer/
-- **Site Netlify anterior:** https://menuogrego.netlify.app/
+- **Site publicado no Vercel:** https://menuogrego.vercel.app/
 - **Repositório público:** https://github.com/jailsonb958-dotcom/menuogrego
+- **Site Netlify anterior:** https://menuogrego.netlify.app/
 
-A demonstração moderna inclui busca, filtros por categoria, cards com imagens, carrinho lateral, ajuste de quantidades e resumo pronto para WhatsApp. A URL de demonstração pertence ao ambiente temporário de desenvolvimento.
+O endereço recomendado para compartilhar com os clientes é o do Vercel. Ele está conectado à branch `main` do GitHub e será atualizado automaticamente a cada novo push.
+
+### Pedidos pelo WhatsApp
+
+O botão **Enviar pedido pelo WhatsApp** abre a conversa do restaurante com o pedido e o total preenchidos automaticamente.
+
+- WhatsApp: **(21) 98162-5903**
+- Link direto: https://wa.me/5521981625903
 
 ## Stack
 
@@ -25,7 +32,7 @@ A demonstração moderna inclui busca, filtros por categoria, cards com imagens,
 - Filtros por categoria com contagem de itens.
 - Fotos dos pratos reaproveitadas do acervo original.
 - Carrinho lateral com quantidade, remoção e total.
-- Resumo do pedido copiado para o WhatsApp.
+- Pedido enviado diretamente pelo WhatsApp com itens, quantidades e total.
 - Layout adaptado para celular, tablet e desktop.
 
 ## Desenvolvimento local
@@ -42,7 +49,7 @@ npm run build
 npm run preview
 ```
 
-O número real do WhatsApp ainda precisa ser configurado no checkout para transformar o resumo copiado em link direto de conversa.
+O número configurado no checkout é `5521981625903`, correspondente ao WhatsApp **(21) 98162-5903**.
 
 ## Estrutura
 

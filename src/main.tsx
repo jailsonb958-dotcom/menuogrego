@@ -20,6 +20,7 @@ const categoryLabels: Record<string, string> = {
   MEAT: 'Carnes', 'MAKARONADES(PASTA)': 'Massas', COMBOS: 'Combos', DESSERTS: 'Sobremesas',
 }
 const categories = [...new Set(items.map((item) => item.category))]
+const whatsappNumber = '5521981625903'
 const highlights = [
   { eyebrow: 'Especialidade para compartilhar', title: 'A mesa grega começa aqui.', image: '/assets/img/pikilia.jpeg' },
   { eyebrow: 'Receitas do mar', title: 'Frescor mediterrâneo em cada garfada.', image: '/assets/img/lagosta-liguine.JPG' },
@@ -51,10 +52,10 @@ function App() {
     return next
   })
   const buildOrder = () => cartItems.map((item) => `${cart[itemId(item)]}x ${item.name} — ${money(item.price * cart[itemId(item)])}`).join('\n') + `\n\nTotal: ${money(cartTotal)}`
-  const checkout = async () => {
+  const checkout = () => {
     const message = `Olá, O Grego! Gostaria de fazer este pedido:\n\n${buildOrder()}`
-    await navigator.clipboard?.writeText(message)
-    alert('Resumo copiado. Para ativar o envio direto, configure o número de WhatsApp do restaurante no arquivo src/main.tsx.')
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   return <div className="app-shell">
@@ -80,7 +81,7 @@ function App() {
     </main>
     <footer id="contato"><div className="footer-brand"><span className="brand-mark">OG</span><strong>O Grego</strong></div><p>Uma experiência mediterrânea, servida com tempo e afeto.</p><small>Cardápio digital · São Paulo</small></footer>
 
-    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div><p className="eyebrow dark">seu pedido</p><h2>{cartCount ? `${cartCount} ${cartCount === 1 ? 'item' : 'itens'}` : 'Seu carrinho'}</h2></div><button className="icon-button" onClick={() => setCartOpen(false)} aria-label="Fechar carrinho"><X/></button></div>{cartItems.length === 0 ? <div className="cart-empty"><ShoppingBag size={38}/><h3>Comece pelos sabores</h3><p>Adicione seus pratos favoritos ao pedido.</p></div> : <><div className="cart-list">{cartItems.map((item) => <div className="cart-line" key={itemId(item)}><img src={item.image} alt=""/><div className="cart-line-info"><h3>{item.name.replace(/^\d+\s/, '')}</h3><strong>{money(item.price * cart[itemId(item)])}</strong><div className="quantity"><button onClick={() => remove(item)} aria-label="Diminuir quantidade"><Minus size={14}/></button><span>{cart[itemId(item)]}</span><button onClick={() => add(item)} aria-label="Aumentar quantidade"><Plus size={14}/></button><button className="delete-button" onClick={() => setCart((current) => { const next={...current}; delete next[itemId(item)]; return next })} aria-label="Remover item"><Trash2 size={14}/></button></div></div></div>)}</div><div className="cart-summary"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout}>Copiar pedido para WhatsApp <ArrowRight size={17}/></button><small>O botão copia o resumo do pedido. O número do restaurante será conectado na próxima configuração.</small></div></>}</aside></div>}
+    {cartOpen && <div className="drawer-backdrop" onClick={() => setCartOpen(false)}><aside className="cart-drawer" onClick={(event) => event.stopPropagation()}><div className="drawer-header"><div><p className="eyebrow dark">seu pedido</p><h2>{cartCount ? `${cartCount} ${cartCount === 1 ? 'item' : 'itens'}` : 'Seu carrinho'}</h2></div><button className="icon-button" onClick={() => setCartOpen(false)} aria-label="Fechar carrinho"><X/></button></div>{cartItems.length === 0 ? <div className="cart-empty"><ShoppingBag size={38}/><h3>Comece pelos sabores</h3><p>Adicione seus pratos favoritos ao pedido.</p></div> : <><div className="cart-list">{cartItems.map((item) => <div className="cart-line" key={itemId(item)}><img src={item.image} alt=""/><div className="cart-line-info"><h3>{item.name.replace(/^\d+\s/, '')}</h3><strong>{money(item.price * cart[itemId(item)])}</strong><div className="quantity"><button onClick={() => remove(item)} aria-label="Diminuir quantidade"><Minus size={14}/></button><span>{cart[itemId(item)]}</span><button onClick={() => add(item)} aria-label="Aumentar quantidade"><Plus size={14}/></button><button className="delete-button" onClick={() => setCart((current) => { const next={...current}; delete next[itemId(item)]; return next })} aria-label="Remover item"><Trash2 size={14}/></button></div></div></div>)}</div><div className="cart-summary"><div><span>Total</span><strong>{money(cartTotal)}</strong></div><button className="checkout-button" onClick={checkout}>Enviar pedido pelo WhatsApp <ArrowRight size={17}/></button><small>O pedido será aberto no WhatsApp do restaurante: (21) 98162-5903.</small></div></>}</aside></div>}
   </div>
 }
 
